@@ -9,6 +9,8 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@elysiajs/swagger": "^1.0.5",
+    "@google/generative-ai": "^0.14.1",
     "@types/express": "^4.17.21",
     "@types/react-dom": "^18.3.0",
     "express": "^4.19.2",

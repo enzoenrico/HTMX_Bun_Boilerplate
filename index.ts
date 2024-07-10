@@ -11,7 +11,6 @@ import { Todo } from "./interfaces";
 import Form from "./components/Form";
 import EditForm from "./components/EditForm";
 
-
 const app = express();
 
 //middleware
@@ -32,6 +31,7 @@ app.get("/", (req, res) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>todo</title>
                 <script src="https://unpkg.com/htmx.org/dist/htmx.js"></script>
+                <link rel="stylesheet" href="/styles.css"
             </head>
             <body>
                 ${html}
@@ -39,6 +39,10 @@ app.get("/", (req, res) => {
             </html>
         `);
 });
+
+app.get('/styles.css', (req, res) => {
+    res.sendFile(__dirname + '/public/styles.css')
+})
 
 //endpoints
 const todos: Todo[] = [{ id: 1, title: "pong todo", completed: false }];
